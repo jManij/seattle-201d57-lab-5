@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
@@ -107,12 +109,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { 
+function multiplyArray(multArr) {
   var finalProduct = 1;
   for (var i = 0; i < multArr.length; i++) {
     finalProduct = multiply(finalProduct, multArr[i])[0];
   }
-  var message = 'The numbers ' + multArr.toString() + ' have a product of 24.';
+  var message = 'The numbers ' + multArr.toString() + ' have a product of ' + finalProduct + '.';
   return[finalProduct, message];
 }
 
@@ -140,11 +142,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+function multiplyAnyArray(dynamicArray) {
+  return multiplyArray(dynamicArray);
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
