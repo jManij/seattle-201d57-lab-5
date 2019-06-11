@@ -15,6 +15,7 @@ function sum(a, b) {
   var message = 'The sum of '+ a + ' and '+ b +' is '+ total +'.';
   return [total, message];
 
+
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -58,11 +59,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  var sum = a + b + c;
-  var product = a * b * c;
-  var message1 = a + ' and '+ b + ' and ' + c + ' sum to '+ sum + '.';
-  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
-  return [sum, product, message1, message2];
+  var sum1 = sum(a,b)[0];
+  var finalSum = sum(sum1, c)[0];
+  var product1 = multiply(a,b)[0];
+  var finalProduct = multiply(product1, c)[0];
+  var message1 = a + ' and '+ b + ' and ' + c + ' sum to '+ finalSum + '.';
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + finalProduct + '.';
+  return [finalSum, finalProduct, message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
